@@ -36,9 +36,7 @@ public class CompaniesAdapter extends RecyclerView.Adapter<CompaniesAdapter.Comp
 
     @Override
     public void onBindViewHolder(@NonNull CompaniesAdapter.CompaniesHolder holder, int position) {
-
         holder.bindView(position);
-
     }
 
     @Override

@@ -26,9 +26,16 @@ public class HomeActivity extends AppCompatActivity implements HomeListener,
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        initUI();
+        if (Helper.checkNetworkConnection(this)) {
 
-        getProducts();
+            initUI();
+
+            getProducts();
+
+        } else {
+            Toast.makeText(this, "No connection, Try Again", Toast.LENGTH_SHORT).show();
+        }
+
 
     }
 
