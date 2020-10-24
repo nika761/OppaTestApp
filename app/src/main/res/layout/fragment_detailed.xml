@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/detail_company_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toStartOf="@id/detail_company_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/detail_company_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintBottom_toBottomOf="@id/detail_company_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/detail_company_image"
+            app:layout_constraintTop_toTopOf="@id/detail_company_image" />
+
+        <TextView
+            android:id="@+id/detail_company_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="@id/detail_company_name"
+            app:layout_constraintStart_toStartOf="@id/detail_company_image"
+            app:layout_constraintTop_toBottomOf="@id/detail_company_image" />
+
+        <TextView
+            android:id="@+id/detail_field_head"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            app:layout_constraintEnd_toEndOf="@id/detail_company_name"
+            app:layout_constraintStart_toStartOf="@id/detail_company_image"
+            app:layout_constraintTop_toBottomOf="@id/detail_company_description" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/detail_field_icon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            app:layout_constraintBottom_toBottomOf="@id/detail_field"
+            app:layout_constraintEnd_toStartOf="@+id/restrict_number"
+            app:layout_constraintStart_toStartOf="@id/detail_company_image"
+            app:layout_constraintTop_toTopOf="@id/detail_field" />
+
+        <TextView
+            android:id="@+id/restrict_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="5"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/detail_field"
+            app:layout_constraintEnd_toStartOf="@id/detail_field"
+            app:layout_constraintStart_toEndOf="@id/detail_field_icon"
+            app:layout_constraintTop_toTopOf="@id/detail_field" />
+
+        <EditText
+            android:id="@+id/detail_field"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/green"
+            android:inputType="number"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@id/detail_company_name"
+            app:layout_constraintStart_toEndOf="@+id/restrict_number"
+            app:layout_constraintTop_toBottomOf="@id/detail_field_head" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/detail_field_money_icon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            app:layout_constraintBottom_toBottomOf="@id/detail_field_money"
+            app:layout_constraintEnd_toStartOf="@+id/detail_field_money"
+            app:layout_constraintStart_toStartOf="@id/detail_company_image"
+            app:layout_constraintTop_toTopOf="@id/detail_field_money" />
+
+        <EditText
+            android:id="@+id/detail_field_money"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="50dp"
+            android:backgroundTint="@color/green"
+            android:hint="ჩასარიცხი თანხა"
+            android:inputType="number"
+            android:maxLength="10"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@id/detail_company_name"
+            app:layout_constraintStart_toEndOf="@+id/detail_field_money_icon"
+            app:layout_constraintTop_toBottomOf="@id/detail_field" />
+
+        <Button
+            android:id="@+id/detail_pay_btn"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="70dp"
+            android:background="@drawable/bg_pay_button"
+            android:gravity="center"
+            android:text="გადახდა"
+            android:textColor="@color/green"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@id/detail_company_name"
+            app:layout_constraintStart_toStartOf="@id/detail_company_image"
+            app:layout_constraintTop_toBottomOf="@id/detail_field_money" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

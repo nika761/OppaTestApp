@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "438475825034",
+    "firebase_url": "https://oppaapp-25761.firebaseio.com",
+    "project_id": "oppaapp-25761",
+    "storage_bucket": "oppaapp-25761.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:438475825034:android:531b27bba159f24617b273",
+        "android_client_info": {
+          "package_name": "com.example.testapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "438475825034-b5cqgrjqpkpag6lo5iqqlevtoi6lraks.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzg8d6z4zEOkTHxvoLzvadHdFVxfvpxGw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "438475825034-b5cqgrjqpkpag6lo5iqqlevtoi6lraks.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
