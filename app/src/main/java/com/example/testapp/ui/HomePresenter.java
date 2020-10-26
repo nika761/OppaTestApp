@@ -16,10 +16,10 @@ public class HomePresenter {
 
     private final DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("products");
 
-    private final HomeListener productsListener;
+    private final HomeListener homeListener;
 
-    public HomePresenter(HomeListener productsListener) {
-        this.productsListener = productsListener;
+    public HomePresenter(HomeListener homeListener) {
+        this.homeListener = homeListener;
     }
 
     void getProducts() {
@@ -34,14 +34,14 @@ public class HomePresenter {
                 }
 
                 if (products.size() != 0)
-                    productsListener.onGetProducts(products);
+                    homeListener.onGetProducts(products);
                 else
-                    productsListener.onGetError("Size is 0");
+                    homeListener.onGetError("Size is 0");
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                productsListener.onGetError(error.getMessage());
+                homeListener.onGetError(error.getMessage());
             }
         });
     }
