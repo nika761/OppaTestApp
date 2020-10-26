@@ -28,14 +28,15 @@ public class PaymentFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_payment, container, false);
+
         image = view.findViewById(R.id.payment_image);
         name = view.findViewById(R.id.payment_name);
         amount = view.findViewById(R.id.payment_amount);
         number = view.findViewById(R.id.payment_number);
+
         Button homeBtn = view.findViewById(R.id.payment_btn);
-        homeBtn.setOnClickListener(v -> {
-            startHomeActivity();
-        });
+        homeBtn.setOnClickListener(v -> startHomeActivity());
+
         return view;
     }
 

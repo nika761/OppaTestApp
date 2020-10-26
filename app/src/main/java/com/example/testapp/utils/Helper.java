@@ -22,14 +22,17 @@ import static android.content.Context.CONNECTIVITY_SERVICE;
 public class Helper {
 
     public static void loadImage(Context context, String url, CircleImageView imageView) {
+
         Glide.with(context)
                 .applyDefaultRequestOptions(new RequestOptions().centerCrop())
                 .load(url)
                 .into(imageView);
+
     }
 
     public static void loadFragment(Fragment currentFragment, Bundle data, int fragmentID,
                                     boolean backStack, FragmentActivity fragmentActivity) {
+
         currentFragment.setArguments(data);
         FragmentTransaction fragmentTransaction = fragmentActivity
                 .getSupportFragmentManager()
@@ -38,12 +41,14 @@ public class Helper {
         if (backStack) {
             fragmentTransaction.addToBackStack(null);
         }
+
         fragmentTransaction
                 .replace(fragmentID, currentFragment)
                 .commit();
     }
 
     public static boolean checkNetworkConnection(Context context) {
+
         boolean wifiConnected = false;
         boolean mobileDataConnected = false;
 
@@ -54,5 +59,6 @@ public class Helper {
             mobileDataConnected = networkInfo.getType() == ConnectivityManager.TYPE_MOBILE;
         }
         return wifiConnected || mobileDataConnected;
+
     }
 }
